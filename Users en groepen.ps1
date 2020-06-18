@@ -1,4 +1,4 @@
-﻿foreach ($line in Get-Content "C:\temp\Users.txt")
+﻿foreach ($line in Get-Content "C:\Users\Julien.000\Desktop\School\Semester 2\Programming\Scripts\Users.txt")
 {
     $info = $line -split ";"
 
@@ -19,7 +19,7 @@
 
 }
 
-foreach ($line in Get-Content "C:\temp\groups.txt")
+foreach ($line in Get-Content "C:\Users\Julien.000\Desktop\School\Semester 2\Programming\Scripts\groups.txt")
 {
 
     $info = $line -split ";"
@@ -34,4 +34,4 @@ foreach ($line in Get-Content "C:\temp\groups.txt")
 
 }
 
-Import-Csv C:\temp\Group.csv.txt | ForEach-Object {Add-ADGroupMember -Identity $_.groupname -Members $_.username}
+Import-Csv C:\Users\Julien.000\Desktop\School\Semester 2\Programming\Scripts\Group.csv.txt | ForEach-Object {Add-ADGroupMember -Identity $_.groupname -Members $_.username}
